@@ -1,0 +1,316 @@
+
+========== QUERY 1 ==========
+
+
+
+    SELECT title, rating
+    FROM books
+    WHERE rating >= 3;
+    
+
+                                                                                                                              title  rating
+                                                                                You Are What You Love: The Spiritual Power of Habit       4
+                                                                                  God: The Most Unpleasant Character in All Fiction       5
+                                                                                                                 The Book of Mormon       3
+                                                                                                                  The Bhagavad Gita       3
+                                                                      Choosing Our Religion: The Spiritual Lives of America's Nones       4
+                                                                                                          Rip it Up and Start Again       5
+                                                 Our Band Could Be Your Life: Scenes from the American Indie Underground, 1981-1991       3
+                                                                                Please Kill Me: The Uncensored Oral History of Punk       4
+                                                                Kill 'Em and Leave: Searching for James Brown and the American Soul       5
+Orchestra of Exiles: The Story of Bronislaw Huberman, the Israel Philharmonic, and the One Thousand Jews He Saved from Nazi Horrors       3
+                                                                                                         No One Here Gets Out Alive       5
+                                                                                                                               Life       5
+                                                                                                   Forever Rockers (The Rocker #12)       3
+                                                                        The Book of Basketball: The NBA According to The Sports Guy       5
+                                                                                   Friday Night Lights: A Town, a Team, and a Dream       3
+                                                                                                             Icing (Aces Hockey #2)       4
+                                                                                                                     Wall and Piece       4
+                                                                                            Feathers: Displays of Brilliant Plumage       3
+                                                                Art and Fear: Observations on the Perils (and Rewards) of Artmaking       4
+                                                                                     The New Drawing on the Right Side of the Brain       3
+                                                                                                                  History of Beauty       4
+                                                                                                                   The Story of Art       4
+                                                                                                                     Ways of Seeing       5
+                                                                                              Sapiens: A Brief History of Humankind       5
+                                                                                    Zealot: The Life and Times of Jesus of Nazareth       3
+                                                                                      A Distant Mirror: The Calamitous 14th Century       3
+                                                                              1491: New Revelations of the Americas Before Columbus       3
+                                                                            Brilliant Beacons: A History of the American Lighthouse       3
+                                               "Most Blessed of the Patriarchs": Thomas Jefferson and the Empire of the Imagination       5
+                                                                                               A Short History of Nearly Everything       5
+                                                                                           Catherine the Great: Portrait of a Woman       4
+                                                               The Mathews Men: Seven Brothers and the War Against Hitler's U-boats       5
+                                                                                                                   The Hiding Place       4
+                                                                                                                  The Elephant Tree       5
+                                                                                                                Behind Closed Doors       4
+                                                                                                                       You (You #1)       5
+                                                                                                    Killing Floor (Jack Reacher #1)       4
+                                                                               The Bone Hunters (Lexy Vaughan & Steven Macaulay #2)       3
+                                                                                 The Dirty Little Secrets of Getting Your Dream Job       4
+                                                                             The Third Wave: An Entrepreneur’s Vision of the Future       5
+                                                        The 10% Entrepreneur: Live Your Startup Dream Without Quitting Your Day Job       3
+                                                                               Made to Stick: Why Some Ideas Survive and Others Die       5
+                                                                                                     The Art of Startup Fundraising       3
+                                                                           Born for This: How to Find the Work You Were Meant to Do       5
+                    The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses       3
+
+
+========== QUERY 2 ==========
+
+
+
+    SELECT title, price_inr
+    FROM books
+    ORDER BY price_inr DESC
+    LIMIT 8;
+    
+
+                                                                                    title  price_inr
+                                     The Bone Hunters (Lexy Vaughan & Steven Macaulay #2)    6299.40
+Thomas Jefferson and the Tripoli Pirates: The Forgotten War That Changed American History    6292.02
+                                                 Catherine the Great: Portrait of a Woman    6177.02
+                                                                        The Bhagavad Gita    6065.20
+       Our Band Could Be Your Life: Scenes from the American Indie Underground, 1981-1991    6039.88
+                                                                         The Hiding Place    5898.50
+                        Old Records Never Die: One Man's Quest for His Vinyl and His Past    5872.13
+                                                    Sapiens: A Brief History of Humankind    5721.26
+
+
+========== QUERY 3 ==========
+
+
+
+    SELECT DISTINCT category_name
+    FROM categories;
+    
+
+   category_name
+             Art
+        Business
+         History
+           Music
+        Religion
+Sports and Games
+        Thriller
+
+
+========== QUERY 4 ==========
+
+
+
+    SELECT title, price_inr
+    FROM books
+    WHERE price_inr BETWEEN 3500 AND 5600;
+    
+
+                                                                                                                                                              title  price_inr
+                                                                                Don't Be a Jerk: And Other Practical Advice from Dogen, Japan's Greatest Zen Master    4005.84
+                                                                                                                                          Rip it Up and Start Again    3694.61
+                                                                                                                                                    How Music Works    3937.26
+                                                                                                Kill 'Em and Leave: Searching for James Brown and the American Soul    4752.77
+                                                                                                                                                 Chronicles, Vol. 1    5549.30
+                                                                                                      This Is Your Brain on Music: The Science of a Human Obsession    4051.20
+                                                                                                        The Book of Basketball: The NBA According to The Sports Guy    4730.62
+                                                                                                                   Friday Night Lights: A Town, a Team, and a Dream    5403.71
+                                                                                                                           Settling the Score (The Summer Games #1)    4738.00
+                                                                                                                                             Icing (Aces Hockey #2)    4266.42
+                                                                                                                                                     Wall and Piece    4660.99
+                                                                                                                            Feathers: Displays of Brilliant Plumage    5174.77
+                                                                                                Art and Fear: Observations on the Perils (and Rewards) of Artmaking    5130.46
+                                                                                                                     The New Drawing on the Right Side of the Brain    4538.61
+                                                                                                                                                   The Story of Art    4340.27
+                                                                                                                                                     Ways of Seeing    4168.30
+Political Suicide: Missteps, Peccadilloes, Bad Calls, Backroom Hijinx, Sordid Pasts, Rotten Breaks, and Just Plain Dumb Mistakes in the Annals of American Politics    3827.54
+                                                                               "Most Blessed of the Patriarchs": Thomas Jefferson and the Empire of the Imagination    4692.64
+                                                                                                                               A Short History of Nearly Everything    5528.20
+                                                                                                    The Rise and Fall of the Third Reich: A History of Nazi Germany    4185.19
+                                                                                               The Mathews Men: Seven Brothers and the War Against Hitler's U-boats    4527.00
+                                                                                                      America's War for the Greater Middle East: A Military History    5403.71
+                                                                                         House of Lost Worlds: Dinosaurs, Dynasties, and the Story of Life on Earth    4610.35
+                                                                                                                                                Behind Closed Doors    5509.21
+                                                                                                                                                       You (You #1)    4600.85
+                                                                                                                                The 14th Colony (Cotton Malone #11)    4139.82
+                                                                                                                           Far From True (Promise Falls Trilogy #2)    3685.12
+                                                                                                                 The Dirty Little Secrets of Getting Your Dream Job    3517.37
+                                                                                                               Made to Stick: Why Some Ideas Survive and Others Die    4098.68
+                                                                                                Quench Your Own Thirst: Business Lessons Learned Over a Beer or Two    4551.27
+                                                                                 The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It    3894.00
+                                                                                                                                                 Rich Dad, Poor Dad    5458.57
+                                                    The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses    3578.56
+                                                                                                                                                             Rework    4734.84
+
+
+========== QUERY 5 ==========
+
+
+
+    SELECT
+        b.title,
+        c.category_name,
+        b.rating,
+        b.price_inr
+    FROM books b
+    LEFT JOIN categories c
+    ON b.category_id = c.category_id;
+    
+
+                                                                                                                                                              title    category_name  rating  price_inr
+                                                                                Don't Be a Jerk: And Other Practical Advice from Dogen, Japan's Greatest Zen Master         Religion       2    4005.84
+                                                                                                                You Are What You Love: The Spiritual Power of Habit         Religion       4    2307.29
+                                                                                                                  God: The Most Unpleasant Character in All Fiction         Religion       5    3168.16
+                                                                                                                                                 The Book of Mormon         Religion       3    2592.14
+                                                                                         A History of God: The 4,000-Year Quest of Judaism, Christianity, and Islam         Religion       1    2913.91
+                                                                                                                                                  The Bhagavad Gita         Religion       3    6065.20
+                                                                                                      Choosing Our Religion: The Spiritual Lives of America's Nones         Religion       4    2998.31
+                                                                                                                                          Rip it Up and Start Again            Music       5    3694.61
+                                                                                 Our Band Could Be Your Life: Scenes from the American Indie Underground, 1981-1991            Music       3    6039.88
+                                                                                                                                                    How Music Works            Music       2    3937.26
+                                                                                                                                      Love Is a Mix Tape (Music #1)            Music       1    1902.17
+                                                                                                                Please Kill Me: The Uncensored Oral History of Punk            Music       4    3290.54
+                                                                                                Kill 'Em and Leave: Searching for James Brown and the American Soul            Music       5    4752.77
+                                                                                                                                                 Chronicles, Vol. 1            Music       2    5549.30
+                                                                                                      This Is Your Brain on Music: The Science of a Human Obsession            Music       1    4051.20
+                                Orchestra of Exiles: The Story of Bronislaw Huberman, the Israel Philharmonic, and the One Thousand Jews He Saved from Nazi Horrors            Music       3    1303.98
+                                                                                                                                         No One Here Gets Out Alive            Music       5    2112.11
+                                                                                                                                                               Life            Music       5    3331.69
+                                                                                                  Old Records Never Die: One Man's Quest for His Vinyl and His Past            Music       2    5872.13
+                                                                                                                                   Forever Rockers (The Rocker #12)            Music       3    3038.40
+                                                                                                        The Book of Basketball: The NBA According to The Sports Guy Sports and Games       5    4730.62
+                                                                                                                   Friday Night Lights: A Town, a Team, and a Dream Sports and Games       3    5403.71
+                                                                                                                                     Sugar Rush (Offensive Line #2) Sports and Games       1    2576.31
+                                                                                                                           Settling the Score (The Summer Games #1) Sports and Games       2    4738.00
+                                                                                                                                             Icing (Aces Hockey #2) Sports and Games       4    4266.42
+                                                                                                                                                     Wall and Piece              Art       4    4660.99
+                                                                                                                            Feathers: Displays of Brilliant Plumage              Art       3    5174.77
+                                                                                                Art and Fear: Observations on the Perils (and Rewards) of Artmaking              Art       4    5130.46
+                                                                                                                     The New Drawing on the Right Side of the Brain              Art       3    4538.61
+                                                                                                                                                  History of Beauty              Art       4    1085.59
+                                                                                                                                                   The Story of Art              Art       4    4340.27
+                                                                                                                                                       The Art Book              Art       2    3411.87
+                                                                                                                                                     Ways of Seeing              Art       5    4168.30
+                                                                                                                              Sapiens: A Brief History of Humankind          History       5    5721.26
+                                                             Unbound: How Eight Technologies Made Us Human, Transformed Society, and Brought Our World to the Brink          History       1    2692.36
+                                                                                        The Age of Genius: The Seventeenth Century and the Birth of the Modern Mind          History       1    2081.52
+Political Suicide: Missteps, Peccadilloes, Bad Calls, Backroom Hijinx, Sordid Pasts, Rotten Breaks, and Just Plain Dumb Mistakes in the Annals of American Politics          History       2    3827.54
+                                                                          Thomas Jefferson and the Tripoli Pirates: The Forgotten War That Changed American History          History       1    6292.02
+                                                                                                                    Zealot: The Life and Times of Jesus of Nazareth          History       3    2605.85
+                                                                                                                      A Distant Mirror: The Calamitous 14th Century          History       3    1538.19
+                                                                                                              1491: New Revelations of the Americas Before Columbus          History       3    2299.90
+                                                                                                            Brilliant Beacons: A History of the American Lighthouse          History       3    1207.97
+                                                                               "Most Blessed of the Patriarchs": Thomas Jefferson and the Empire of the Imagination          History       5    4692.64
+                                                                                                                               A Short History of Nearly Everything          History       5    5528.20
+                                                                                                    The Rise and Fall of the Third Reich: A History of Nazi Germany          History       2    4185.19
+                                                                                                                           Catherine the Great: Portrait of a Woman          History       4    6177.02
+                                                                                               The Mathews Men: Seven Brothers and the War Against Hitler's U-boats          History       5    4527.00
+                                                                                                                                                   The Hiding Place          History       4    5898.50
+                                                                                                      America's War for the Greater Middle East: A Military History          History       2    5403.71
+                                                                                                                                                 The Guns of August          History       2    1533.97
+                                                                                         House of Lost Worlds: Dinosaurs, Dynasties, and the Story of Life on Earth          History       2    4610.35
+                                                                                                                                                        In Her Wake         Thriller       1    1354.62
+                                                                                                                                                  The Elephant Tree         Thriller       5    2513.01
+                                                                                                                                                Behind Closed Doors         Thriller       4    5509.21
+                                                                                                                                                       You (You #1)         Thriller       5    4600.85
+                                                                                                                                         The Guilty (Will Robie #4)         Thriller       2    1458.01
+                                                                                                                                The 14th Colony (Cotton Malone #11)         Thriller       1    4139.82
+                                                                                                                                                       Give It Back         Thriller       2    1932.76
+                                                                                                                                    Killing Floor (Jack Reacher #1)         Thriller       4    3322.20
+                                                                                                               The Bone Hunters (Lexy Vaughan & Steven Macaulay #2)         Thriller       3    6299.40
+                                                                                                                           Far From True (Promise Falls Trilogy #2)         Thriller       2    3685.12
+                                                                                                                                                      The Travelers         Thriller       1    1663.74
+                                                                                                                 The Dirty Little Secrets of Getting Your Dream Job         Business       4    3517.37
+                                                                                                             The Third Wave: An Entrepreneur’s Vision of the Future         Business       5    1330.36
+                                                                                        The 10% Entrepreneur: Live Your Startup Dream Without Quitting Your Day Job         Business       3    2906.52
+                                                                                                                          Shoe Dog: A Memoir by the Creator of NIKE         Business       2    2530.94
+                                                                                                               Made to Stick: Why Some Ideas Survive and Others Die         Business       5    4098.68
+                                                                                                Quench Your Own Thirst: Business Lessons Learned Over a Beer or Two         Business       1    4551.27
+                                                                                                                                     The Art of Startup Fundraising         Business       3    2215.50
+                                                                                                           Born for This: How to Find the Work You Were Meant to Do         Business       5    2277.74
+                                                                                 The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It         Business       1    3894.00
+                                                                                                                                                 Rich Dad, Poor Dad         Business       1    5458.57
+                                                    The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses         Business       3    3578.56
+                                                                                                                                                             Rework         Business       2    4734.84
+
+
+========== pd.merge() ==========
+
+
+                                                                                                                                                              title    category_name  rating  price_inr
+                                                                                Don't Be a Jerk: And Other Practical Advice from Dogen, Japan's Greatest Zen Master         Religion       2    4005.84
+                                                                                                                You Are What You Love: The Spiritual Power of Habit         Religion       4    2307.29
+                                                                                                                  God: The Most Unpleasant Character in All Fiction         Religion       5    3168.16
+                                                                                                                                                 The Book of Mormon         Religion       3    2592.14
+                                                                                         A History of God: The 4,000-Year Quest of Judaism, Christianity, and Islam         Religion       1    2913.91
+                                                                                                                                                  The Bhagavad Gita         Religion       3    6065.20
+                                                                                                      Choosing Our Religion: The Spiritual Lives of America's Nones         Religion       4    2998.31
+                                                                                                                                          Rip it Up and Start Again            Music       5    3694.61
+                                                                                 Our Band Could Be Your Life: Scenes from the American Indie Underground, 1981-1991            Music       3    6039.88
+                                                                                                                                                    How Music Works            Music       2    3937.26
+                                                                                                                                      Love Is a Mix Tape (Music #1)            Music       1    1902.17
+                                                                                                                Please Kill Me: The Uncensored Oral History of Punk            Music       4    3290.54
+                                                                                                Kill 'Em and Leave: Searching for James Brown and the American Soul            Music       5    4752.77
+                                                                                                                                                 Chronicles, Vol. 1            Music       2    5549.30
+                                                                                                      This Is Your Brain on Music: The Science of a Human Obsession            Music       1    4051.20
+                                Orchestra of Exiles: The Story of Bronislaw Huberman, the Israel Philharmonic, and the One Thousand Jews He Saved from Nazi Horrors            Music       3    1303.98
+                                                                                                                                         No One Here Gets Out Alive            Music       5    2112.11
+                                                                                                                                                               Life            Music       5    3331.69
+                                                                                                  Old Records Never Die: One Man's Quest for His Vinyl and His Past            Music       2    5872.13
+                                                                                                                                   Forever Rockers (The Rocker #12)            Music       3    3038.40
+                                                                                                        The Book of Basketball: The NBA According to The Sports Guy Sports and Games       5    4730.62
+                                                                                                                   Friday Night Lights: A Town, a Team, and a Dream Sports and Games       3    5403.71
+                                                                                                                                     Sugar Rush (Offensive Line #2) Sports and Games       1    2576.31
+                                                                                                                           Settling the Score (The Summer Games #1) Sports and Games       2    4738.00
+                                                                                                                                             Icing (Aces Hockey #2) Sports and Games       4    4266.42
+                                                                                                                                                     Wall and Piece              Art       4    4660.99
+                                                                                                                            Feathers: Displays of Brilliant Plumage              Art       3    5174.77
+                                                                                                Art and Fear: Observations on the Perils (and Rewards) of Artmaking              Art       4    5130.46
+                                                                                                                     The New Drawing on the Right Side of the Brain              Art       3    4538.61
+                                                                                                                                                  History of Beauty              Art       4    1085.59
+                                                                                                                                                   The Story of Art              Art       4    4340.27
+                                                                                                                                                       The Art Book              Art       2    3411.87
+                                                                                                                                                     Ways of Seeing              Art       5    4168.30
+                                                                                                                              Sapiens: A Brief History of Humankind          History       5    5721.26
+                                                             Unbound: How Eight Technologies Made Us Human, Transformed Society, and Brought Our World to the Brink          History       1    2692.36
+                                                                                        The Age of Genius: The Seventeenth Century and the Birth of the Modern Mind          History       1    2081.52
+Political Suicide: Missteps, Peccadilloes, Bad Calls, Backroom Hijinx, Sordid Pasts, Rotten Breaks, and Just Plain Dumb Mistakes in the Annals of American Politics          History       2    3827.54
+                                                                          Thomas Jefferson and the Tripoli Pirates: The Forgotten War That Changed American History          History       1    6292.02
+                                                                                                                    Zealot: The Life and Times of Jesus of Nazareth          History       3    2605.85
+                                                                                                                      A Distant Mirror: The Calamitous 14th Century          History       3    1538.19
+                                                                                                              1491: New Revelations of the Americas Before Columbus          History       3    2299.90
+                                                                                                            Brilliant Beacons: A History of the American Lighthouse          History       3    1207.97
+                                                                               "Most Blessed of the Patriarchs": Thomas Jefferson and the Empire of the Imagination          History       5    4692.64
+                                                                                                                               A Short History of Nearly Everything          History       5    5528.20
+                                                                                                    The Rise and Fall of the Third Reich: A History of Nazi Germany          History       2    4185.19
+                                                                                                                           Catherine the Great: Portrait of a Woman          History       4    6177.02
+                                                                                               The Mathews Men: Seven Brothers and the War Against Hitler's U-boats          History       5    4527.00
+                                                                                                                                                   The Hiding Place          History       4    5898.50
+                                                                                                      America's War for the Greater Middle East: A Military History          History       2    5403.71
+                                                                                                                                                 The Guns of August          History       2    1533.97
+                                                                                         House of Lost Worlds: Dinosaurs, Dynasties, and the Story of Life on Earth          History       2    4610.35
+                                                                                                                                                        In Her Wake         Thriller       1    1354.62
+                                                                                                                                                  The Elephant Tree         Thriller       5    2513.01
+                                                                                                                                                Behind Closed Doors         Thriller       4    5509.21
+                                                                                                                                                       You (You #1)         Thriller       5    4600.85
+                                                                                                                                         The Guilty (Will Robie #4)         Thriller       2    1458.01
+                                                                                                                                The 14th Colony (Cotton Malone #11)         Thriller       1    4139.82
+                                                                                                                                                       Give It Back         Thriller       2    1932.76
+                                                                                                                                    Killing Floor (Jack Reacher #1)         Thriller       4    3322.20
+                                                                                                               The Bone Hunters (Lexy Vaughan & Steven Macaulay #2)         Thriller       3    6299.40
+                                                                                                                           Far From True (Promise Falls Trilogy #2)         Thriller       2    3685.12
+                                                                                                                                                      The Travelers         Thriller       1    1663.74
+                                                                                                                 The Dirty Little Secrets of Getting Your Dream Job         Business       4    3517.37
+                                                                                                             The Third Wave: An Entrepreneur’s Vision of the Future         Business       5    1330.36
+                                                                                        The 10% Entrepreneur: Live Your Startup Dream Without Quitting Your Day Job         Business       3    2906.52
+                                                                                                                          Shoe Dog: A Memoir by the Creator of NIKE         Business       2    2530.94
+                                                                                                               Made to Stick: Why Some Ideas Survive and Others Die         Business       5    4098.68
+                                                                                                Quench Your Own Thirst: Business Lessons Learned Over a Beer or Two         Business       1    4551.27
+                                                                                                                                     The Art of Startup Fundraising         Business       3    2215.50
+                                                                                                           Born for This: How to Find the Work You Were Meant to Do         Business       5    2277.74
+                                                                                 The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It         Business       1    3894.00
+                                                                                                                                                 Rich Dad, Poor Dad         Business       1    5458.57
+                                                    The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses         Business       3    3578.56
+                                                                                                                                                             Rework         Business       2    4734.84
+
+
+SUCCESS : SQL JOIN and pd.merge() outputs are Matching.
+
