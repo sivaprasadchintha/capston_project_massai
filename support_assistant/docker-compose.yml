@@ -1,7 +1,0 @@
-services:
-  support_assistant:
-    build: .
-    ports:
-      - "7860:7860"
-    environment:
-      MOCK_LLM: "1"
